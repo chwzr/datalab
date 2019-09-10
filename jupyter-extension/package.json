@@ -1,0 +1,19 @@
+{
+  "name": "datalab",
+  "version": "1.2.1",
+  "description": "datalab on jupyter, as an extension",
+  "scripts": {
+    "build:python": "python setup.py sdist && python setup.py bdist_wheel",
+    "upload:pypi": "twine upload dist/*",
+    "prebuild:python": "rimraf dist",
+    "publish": "echo 'not really publishing'"
+  },
+  "publishConfig": {
+    "access": "public",
+    "dry-run": true
+  },
+  "private": true,
+  "repository": "https://github.com/chwzr/datalab",
+  "author": "Felix Koppe <felix@koppe.design>",
+  "license": "BSD-3-Clause"
+}
