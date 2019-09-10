@@ -59,7 +59,9 @@ jupyter datalab
 
 
 
-## deploy
+## Deploy
+
+You may want to change the Version first in `jupyter-extension/datalab_on_jupyter/package.json`
 
 Build Frontend
 
@@ -78,7 +80,33 @@ yarn run build:python
 
 Deploy to PyPi
 
-``bash
+```bash
 cd jupyterhub-extension
 yarn run upload:pypi
 ```
+
+
+
+
+# Docker Container
+
+Build the Container:
+
+```bash
+docker build -t mars.koppe.design/cavorit-datalab .
+```
+
+Push to Registry:
+
+```bash
+docker push mars.koppe.design/cavorit-datalab
+```
+
+
+Run from Registry:
+
+```bash
+docker run -d --rm -p 8888:8888 mars.koppe.design/cavorit-datalab start.sh jupyter datalab
+```
+
+
